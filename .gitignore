@@ -8,6 +8,7 @@ __pycache__/
 dist/
 build/
 .eggs/
+.pytest_cache/
 
 # Virtual environments
 venv*/
@@ -64,3 +65,9 @@ Thumbs.db
 
 # Hugging Face cache
 .cache/
+
+slack_dataset.gzip
+
+models/tokenizers/
+
+best_*.pth
