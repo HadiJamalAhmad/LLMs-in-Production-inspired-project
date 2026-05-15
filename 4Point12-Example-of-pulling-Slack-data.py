@@ -3,21 +3,7 @@ import pandas  # Import pandas so the collected Slack messages can be stored in 
 
 import os  # Import os so Python can read environment variables.
 
-import requests
 
-response = requests.post(
-    "https://slack.com/api/oauth.v2.access",
-    data={
-        "client_id": "",
-        "client_secret": "YOUR_CLIENT_SECRET",
-        "code": "PASTE_CODE_HERE",
-        "redirect_uri": "http://localhost:3000/slack/oauth_redirect",
-    },
-)
-
-data = response.json()
-print(data)
-print("USER TOKEN:", data["authed_user"]["access_token"])
 
 token_slack = os.getenv("SLACK_TOKEN")  # Read the Slack token, returning None instead of crashing if missing.
 
